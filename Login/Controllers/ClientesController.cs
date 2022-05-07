@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 
 namespace Login.Controllers
 {
+    [Authorize(AuthenticationSchemes = "CookieAuthentication")]
     public class ClientesController : Controller
     {
         public IActionResult Index()
